@@ -23,8 +23,9 @@ Route::get('/{code}', 'Controller@getSomePage');
 
 Route::get('/puppies/{code}', 'Controller@getPuppyPage');
 
-//Route::get('/{code}', 'App\Http\Controllers\Controller@getPage');
-//Route::get('/{code}', [Controller::class, '@getPage']);
-
+//Route::get('/admin.panel', 'Controller@getSomePage');
+Route::get('/admin.panel', function () {
+    return view('welcome');
+});
 
 //Route::view('/', 'index');
