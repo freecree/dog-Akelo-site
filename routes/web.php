@@ -13,19 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return view('index');
-});
-//Route::get('/puppies',array('as' => 'puppies', 'uses' => 'Controller@getSomePage'));
-
+//Site
+Route::get('/', 'Controller@getHome')->name('home');
 Route::get('/{code}', 'Controller@getSomePage');
-
 Route::get('/puppies/{code}', 'Controller@getPuppyPage');
 
-//Route::get('/admin.panel', 'Controller@getSomePage');
-Route::get('/admin.panel', function () {
-    return view('welcome');
+//admin panel
+
+Route::get('admin/log', 'AdminController@log')->name('admin.log');
+Route::post('admin', 'AdminController@getLogForm')->name('admin.getForm');
+Route::group(['middleware' => 'admin'], function() {
+    //Route::get('admin', 'AdminController@getAdmin')->name('admin');
+    Route::get('admin/pages', 'AdminController@getPages')->name('admin.pages');
+    Route::get('admin/pages/puppies/add', 'AdminController@addPuppy')->name('puppies.add');
+    Route::post('admin/pages/puppies/store', 'AdminController@storePuppy')->name('puppies.store');
+    Route::get('admin/pages/puppies/delete/{code}', 'AdminController@deletePuppy')->name('puppies.delete');
+    Route::get('admin/pages/puppies/edit/{code}', 'AdminController@editPuppy')->name('puppies.edit');
+    Route::post('admin/pages/puppies/update', 'AdminController@updatePuppy')->name('puppies.update');
 });
+
+
+
+
+//Route::group(['middleware' => ['web']], function () {
+
+//});
 
 //Route::view('/', 'index');

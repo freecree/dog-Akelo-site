@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     letter-spacing: 0.06em;
     color: #54577C;
-    
+
 }
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -54,7 +54,7 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #121E30; 
+    color: #121E30;
 }
 .title-color {
     color: #5A6678;
@@ -78,7 +78,7 @@ a {
     width: 60%;
     height: 80vh;
     min-height: 670px;
-    
+
     background: #EFF4F4 right top;
 }
 .header {
@@ -100,18 +100,18 @@ a {
 }
 .logo__text {
   font-family: 'Merriweather';
-  margin-left: 18px;    
+  margin-left: 18px;
 }
 .logo__text-first {
-    font-size: 18px;    
+    font-size: 18px;
 }
 .logo__text-second {
-    font-size: 14px; 
-    letter-spacing: 0.027em;   
+    font-size: 14px;
+    letter-spacing: 0.027em;
 }
 .menu {
     position: relative;
-    margin-right: 5%; 
+    margin-right: 5%;
 }
 .gamburger {
     position: relative;
@@ -126,7 +126,7 @@ a {
     display: flex;
     position: relative;
     font-weight: bold;
-    font-size: 15px;   
+    font-size: 15px;
 }
 .navbar li {
     cursor: pointer;
@@ -149,7 +149,7 @@ a {
 }
 .menu-sub {
     display: none;
-} 
+}
 .menu-sub-active li {
     transition: 0.2s ease;
 }
@@ -158,7 +158,7 @@ a {
     padding: 10px 15px;
 }
 .menu-sub-active li:hover {
-    background: #6E7988; 
+    background: #6E7988;
 }
 .menu-sub-active li:hover a{
     color: #fff;
@@ -271,7 +271,7 @@ a {
 }
 .section__title {
     font-size: 45px;
-} 
+}
 .section__title {
     margin-bottom: 72px;
 }
@@ -340,6 +340,7 @@ a {
     position: relative;
     z-index: 1;
     border-left: 4px solid #54577C;
+
 }
 .work__video-sub {
     display: flex;
@@ -354,7 +355,7 @@ a {
 }
 .feature__description {
     width: 37vw;
-} 
+}
 .feature__heading {
     position: relative;
     padding-top: 30px;
@@ -374,7 +375,7 @@ a {
     position: relative;
     z-index: 1;
     font-size: 32px;
-} 
+}
 .defense {
     margin-top: 250px;
 }
@@ -455,14 +456,14 @@ a {
     padding-top: 260px;
     padding-bottom: 125px;
     background: #EFF4F4;
-} 
+}
 /*.parents {
     margin-top: 100px;
 }*/
 .our-dogs__title {
     font-size: 30px;
-    
-} 
+
+}
 .slider-parents {
     margin: 0 auto;
     position: relative;
@@ -564,15 +565,15 @@ a {
     /*margin-top: 85px;*/
     display: flex;
     align-items: center;
-} 
+}
 .map {
     background: #fff;
     width: 60%;
     height: 70vh;
-} 
+}
 .contacts__text {
     margin-left: 50px;
-}  
+}
 .contacts__string {
     display: flex;
     align-items: center;
@@ -606,23 +607,23 @@ a {
 .footer__block {
     display: flex;
     justify-content: space-between;
-} 
+}
 .footer__first-coloumn  {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-} 
+}
 .about-kennel {
     line-height: 1.5em;
 }
 .footer__rights {
     font-size: 15px;
-} 
+}
 .footer__tabs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-} 
+}
 .footer__tabs > li {
     font-weight: bold;
     cursor: pointer;
@@ -630,7 +631,7 @@ a {
 }
 .footer__tabs li:first-child {
     margin-left: 0;
-} 
+}
 .footer__tab-sub li {
     font-size: 16px;
     font-weight: normal;
@@ -719,6 +720,9 @@ a {
 }
 .puppy-main__photoes .sub-pic {
     border: none;
+}
+.puppy-main__photoes .sub-pic img {
+    width: 60px;
 }
 .puppy__sub {
     display: flex;
@@ -873,7 +877,7 @@ a {
     .simple-grow__description {
         padding: 100px 0 !important;
     }
-}            
+}
 
 @media (min-width: 1400px) {
     .work__description {
@@ -882,7 +886,7 @@ a {
     .defense .feature__description {
         padding: 50px 0;
     }
-} 
+}
 
 @media (min-width: 1300px) {
     .simple-grow__description {
@@ -897,7 +901,7 @@ a {
 @media (max-width: 1605px) {
     .dog__name, .dog__info  {
         font-size: 18px;
-    }    
+    }
 }
 
 @media (max-width: 1487px) {
@@ -906,7 +910,7 @@ a {
     }
     .dog__name, .dog__info  {
         font-size: 18px;
-    }    
+    }
 }
 
 @media (max-width: 1400px) {
@@ -916,7 +920,7 @@ a {
     .navbar > li {
         margin-left: 30px;
     }
-    
+
     h1 {
         font-size: 40px;
     }
@@ -936,7 +940,7 @@ a {
        width: 35vw;
        height: 70vh;
        min-height: 490px;
-       
+
     }
     .but-moreabout {
         margin-left: 0;
@@ -983,7 +987,7 @@ a {
     .dog__info {
         margin-top: 25px;
     }
-}  
+}
 
 @media (max-width: 1210px) {
     h1 {
@@ -1023,7 +1027,7 @@ a {
      .main-block__image {
         width: 52vw;
     }
-    
+
     .simple-grow__description {
         padding: 0;
     }
@@ -1056,7 +1060,7 @@ a {
     .event__title {
         font-size: 30px;
     }
-} 
+}
 
 @media (max-width: 1115px) {
     h1 {
@@ -1074,7 +1078,7 @@ a {
     }
     .main-block__image {
         background-size: 100%;
-    } 
+    }
     .main-block__info {
         font-size: 16px;
     }
@@ -1086,8 +1090,8 @@ a {
     }
     .slider-parents, .growingup-dogs__block {
         margin-top: 55px;
-    } 
-    
+    }
+
     .footer__tabs > li {
         margin-left: 30px;
     }
@@ -1146,14 +1150,14 @@ a {
 
    .footer__block {
         flex-direction: column;
-    } 
+    }
     .footer__first-coloumn {
         order: 1;
         margin-top: 30px;
-    } 
+    }
     .footer__rights {
         margin-top: 10px;
-    } 
+    }
     .feature__bg {
         width: 400px;
     }
@@ -1187,7 +1191,7 @@ a {
         margin-top: 20px;
         font-size: 16px;
     }
-}    
+}
 
 @media (max-width: 905px) {
     .main {
@@ -1212,7 +1216,7 @@ a {
     .main-block__text {
         height: 60vh;
         min-height: 390px;
-    }    
+    }
     .main-bg {
        min-height: 586px;
        width: 100%;
@@ -1238,7 +1242,7 @@ a {
     .but-moreabout {
         margin-left: 30px;
         margin-top: 0;
-    }    
+    }
     h1 {
         color: #fff;
     }
@@ -1258,7 +1262,7 @@ a {
     }
     .features {
         padding-top: 100px;
-    
+
     }
     .section__title {
         margin-bottom: 55px;
@@ -1267,11 +1271,11 @@ a {
         margin-top: 55px !important;
         flex-direction: column-reverse;
         position: relative;
-    } 
+    }
     .feature__videoes {
         margin-top: 10px;
         width: 100%;
-    }    
+    }
     .work__video-main {
         position: relative;
         height: 0;
@@ -1287,10 +1291,10 @@ a {
     }
     .feature__bg {
         bottom: -50px;
-    }  
+    }
     .feature__description {
         width: 100%;
-    } 
+    }
     .feature__text {
         margin-bottom: 10px;
     }
@@ -1311,29 +1315,29 @@ a {
         padding-top: 58.136%;
         background-size: 100%;
         position: relative;
-    }  
+    }
     .defense .feature__text {
         margin-top: 30px;
-    }  
+    }
     .simple-grow {
         margin-top: 72px;
         margin-left: 7.5%;
         width: 85%;
-    }  
+    }
     .simple-grow__pic {
         margin-top: 10px;
         width: 100%;
     }
     .simple-grow__photo {
         height: 0;
-        padding-top: 75.033%;  
-    }  
+        padding-top: 75.033%;
+    }
     .simple-grow__text {
         margin-top: 30px;
-        width: 100%; 
+        width: 100%;
         margin-left: 0;
         padding: 0;
-    } 
+    }
     .we-white {
         margin-top: 72px;
         padding-bottom: 60px;
@@ -1359,7 +1363,7 @@ a {
 @media (max-width: 818px) {
     .nav__phone {
         display: none;
-    } 
+    }
     .phone-vistablet {
         margin-bottom: 15px;
         display: block;
@@ -1391,7 +1395,7 @@ a {
     }
 
 }
-@media (max-width: 726px) {  
+@media (max-width: 726px) {
     .contacts {
         background: url(../img/contact-bg.jpg) no-repeat 75% 130%;
     }
@@ -1425,7 +1429,7 @@ a {
     }
     .footer__tabs-main > li:nth-child(4),
     .footer__tabs-main > li:nth-child(2) {
-     
+
         text-align: right;
     }
     .footer__tabs-col {
@@ -1467,13 +1471,13 @@ a {
 
     }
 }
-@media (max-width: 659px) { 
+@media (max-width: 659px) {
     .main {
         min-height: 700px;
     }
     .main-bg {
        min-height: 700px;
-    }   
+    }
     .main-block {
         margin-top: calc(( 30vh - 115px)/2);
         margin-bottom: calc(( 30vh - 115px)/2);
@@ -1515,10 +1519,10 @@ a {
         text-align: center;
         width: 100%;
     }
-    
-} 
 
-@media (max-width: 561px) {  
+}
+
+@media (max-width: 561px) {
     .main-block__info {
         border: none;
         padding: 0;
@@ -1528,19 +1532,19 @@ a {
     }
     .but-puppy {
         margin: 0 auto;
-    }    
+    }
     .but-moreabout {
         margin: 15px auto;
-    } 
+    }
     .main-block .folowUs__socials {
         margin: 0 auto;
-    } 
+    }
     .section__title {
         text-align: center;
     }
     .feature__bg {
         width: 80%;
-    } 
+    }
     .feature__title, .our-dogs__title {
         font-size: 22px;
     }
@@ -1630,18 +1634,18 @@ a {
         margin: 0 auto;
     }
 
-}  
+}
 @media (max-width: 380px) {
     .feature__videoes, .simple-grow__pic  {
         margin-top: 15px;
     }
     .footer__tabs-main > li {
         width: 45%;
-    }  
+    }
     .logo img {
         width: 60px;
         height: 60px;
-    }  
+    }
     .logo__text-first {
         font-size: 15px;
     }
@@ -1652,5 +1656,65 @@ a {
     .puppy-main__title-fromtablet {
         font-size: 25px;
     }
+}
+
+/*admin panel*/
+.admin-panel {
+    margin-top: 50px;
+}
+.admin-panel__title {
+    margin-bottom: 20px;
+}
+.admin-pannel__table {
+
+//border-bottom: 1px solid red;
+    width: 100%;
+}
+.admin-pannel__table caption{
+    padding-top: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+.admin-pannel__table th, td {
+    border-bottom: 1px solid #54577C;
+    padding: 5px 0;
+}
+.admin-pannel__table td {
+    padding-top: 15px;
+}
+
+.action-td {
+    width: 60px;
+    text-align: right;
+}
+.action-td img {
+    width: 25px;
+    height: 25px;
+}
+
+.form-main {
+    margin-bottom: 30px;
+}
+.form-main p {
+    margin-top: 15px;
+}
+.form-main p input, textarea {
+    margin-top: 5px;
+    width: 400px;
+}
+
+.admin-button {
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    border: 0;
+    background: #FC575E;
+    padding: 12px 20px;
+    color: #fff;
+}
+.cancle-but {
+    text-decoration: none;
+    background: #808080;
+    margin-left: 10px;
 }
 
