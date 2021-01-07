@@ -21,13 +21,13 @@ class Controller extends BaseController
         session_unset();
         return view("index");
     }
-    public function getPuppyPage($code) {
-        $p = PuppyPage::where('code', "$code")->firstOrFail();
-        $p->explodeImages();
-        return view("$p->fileName", ['obj'=>$p]);
-    }
+//    public function getPuppyPage($code) {
+//        $p = PuppyPage::where('code', "$code")->firstOrFail();
+//        $p->explodeImages();
+//        return view("$p->fileName", ['obj'=>$p]);
+//    }
 
-    public function getSomePage($code) {
+    public function getPage($code) {
        if ($code == 'admin') {
             if (!Admin::isAdmin()) {
                 return view('admin_form');
@@ -36,7 +36,8 @@ class Controller extends BaseController
             }
         }
         $page = Page::where('code', "$code")->firstOrFail();
-        $all_puppies = DB::table('puppy_pages')->get();
-        return view("$code", ['puppies'=>$all_puppies, 'page'=>$page]);
+        //$all_puppies = DB::table('puppy_pages')->get();
+        return $page->render();
+        //return view("$code", ['puppies'=>$all_puppies, 'page'=>$page]);
     }
 };

@@ -9,7 +9,7 @@
                     <a href="/">Главная</a> / Щенки
                 </div>
                 <h2 class="section__title page__title">
-                    {{$page->title}}
+                    {{$obj->title}}
                 </h2>
             </div>
         </div>
@@ -19,7 +19,7 @@
         <div class="puppies">
             <div class="container">
                 <div class="puppies__block">
-                    @foreach($puppies as $val )
+                    @foreach($obj->items as $val )
                     <div class="puppies__puppy">
                         <a href="puppies/{{$val->code}}" class="puppy__photo restful">
                             <img src="{{asset("img/{$val->image_main}")}}" alt="pappy-photo">

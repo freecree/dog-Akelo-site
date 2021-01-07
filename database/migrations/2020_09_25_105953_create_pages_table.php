@@ -15,9 +15,16 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->string('code', 15)->unique();
-            $table->string('title', 30);
-            $table->timestamps();
+            $table->string('code', 10)->unique();
+            $table->string('parent_code', 10)->default('root');
+            $table->string('title', 255);
+            $table->string('description', 2000);
+            $table->char('sex', 15);
+            $table->string('image_main', 20);
+            $table->string('images_big', 512);
+            $table->string('images_small', 512);
+            $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->dateTime('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
