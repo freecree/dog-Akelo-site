@@ -1,5 +1,5 @@
 @extends('base')
-@section('title', "{{ $obj->title}}")
+@section('title', $obj->title)
 @section('class-header-sub', 'header-subpages')
 @section('content')
     <section class="page puppy-page">
@@ -7,8 +7,9 @@
             <div class="page__heading">
                 <div class="breadcrump">
                     <a href="/">Главная</a>
-                    / <a href="/puppies">Щенки</a>
-                    / {{ $obj->title}}
+                    @foreach($obj->breadCramp() as $item)
+                        / <a href="/{{$item->getRoute()}}">{{$item->title}}</a>
+                    @endforeach
                 </div>
                 <h2 class="section__title puppy-main__title-fromtablet">
                     {{ $obj->title}}

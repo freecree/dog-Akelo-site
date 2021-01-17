@@ -1,36 +1,39 @@
-@extends('admin_base')
-{{--@section('title', "{{ $obj->title}}")--}}
+@extends('admin.base')
+@section('title', "create-page")
 @section('content')
     <div class="container">
-        <h3 class="admin-panel__title" >Редактирование щенка</h3>
-        <form action="{{route('puppies.update')}}" method="post" enctype="multipart/form-data" class="form">
+        <h3 class="admin-panel__title" >Редактирование страницы {{$obj->title}}</h3>
+        <form action="/admin/page/{{$obj->code}}" method="post" enctype="multipart/form-data" class="form">
+            @method('PUT')
             {{ csrf_field() }}
             <div class="form-main">
                 <div class="form-block">
                     <input hidden type="text" name="id" value="{{$obj->id}}" size="10">
-                     <p>Изменить код страницы<br>
+                    <p>Код страницы<br>
                         <input type="text" name="code" value="{{$obj->code}}" size="10">
                     </p>
-                    <p>Изменить заголовок(имя собаки): <br>
+                    <p>Заголовок <br>
                         <input type="text" name="title" value="{{$obj->title}}" size="255">
                     </p>
-                    <p>Изменить описание собаки: <br>
+                    <p>Текст события: <br>
                         <textarea  name="description" cols="40" rows="5" maxlength="2000" >{{$obj->description}}
-
                          </textarea>
                     </p>
-                    <p>Изменить пол собаки: <br>
-                        <input type="text" name="sex" value="{{$obj->sex}}" size="40">
+                    <p>Дата события (Год-Месяц-День): <br>
+                        <input type="text" name="event_date" value="{{date('Y-m-d', strtotime($obj->event_date))}}" placeholder="2020-03-22" size="40">
                     </p>
-                    <p>Вставить другую картинку: <br>
+                    <p>Картинка: <br>
                         <input type="file" name="image" width="50">
                     </p>
+{{--                    <p>Создать ссылку на другую страницу <br>--}}
+{{--                        <input type="text" name="alias_of" placeholder="Введите код страницы" size="255">--}}
+{{--                    </p>--}}
                 </div>
             </div>
             <button class="admin-button add-but" type="submit">
-                Добавить
+                Сохранить
             </button>
-            <a class="admin-button cancle-but" href="{{route('admin.pages')}}">
+            <a class="admin-button cancle-but" href="/admin/page">
                 Отмена
             </a>
         </form>
@@ -43,6 +46,8 @@
                 </ul>
             @endif
         @endif
+
+
     </div>
 
 @endsection

@@ -1670,22 +1670,53 @@ a {
 //border-bottom: 1px solid red;
     width: 100%;
 }
-.admin-pannel__table caption{
-    padding-top: 15px;
-    text-align: left;
-    font-weight: bold;
+.flex-wrapper {
+    display: flex;
 }
-.admin-pannel__table th, td {
-    border-bottom: 1px solid #54577C;
-    padding: 5px 0;
+.num-input {
+    width: 35px;
 }
-.admin-pannel__table td {
-    padding-top: 15px;
+.sort-table th, .sort-table td {
+    text-align: center;
+    padding: 10px 20px;
+}
+.sort-button {
+    height: 50px;
+    margin-left: 20px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+/*.admin-pannel__table caption{*/
+/*    padding-top: 15px;*/
+/*    text-align: left;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.admin-pannel__table th, td {*/
+/*    border-bottom: 1px solid #54577C;*/
+/*    padding: 5px 0;*/
+/*}*/
+/*.admin-pannel__table td {*/
+/*    padding-top: 15px;*/
+/*}*/
+
 .action-td {
-    width: 60px;
+    //width: 60px;
+    margin-right: 30px;
     text-align: right;
+}
+.action-td button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
+}
+.right .action-td:last-child {
+    margin-right: 0;
 }
 .action-td img {
     width: 25px;
@@ -1704,6 +1735,7 @@ a {
 }
 
 .admin-button {
+    line-height: 1.4em;
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
     font-size: 16px;
@@ -1717,7 +1749,17 @@ a {
     background: #808080;
     margin-left: 10px;
 }
-.children  {
+
+.list-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.children {
     margin-left: 10px;
+}
+.right {
+    display: flex;
 }
 

@@ -11,7 +11,7 @@ $(function() {
              && nav.has(event.target).length === 0) {
             $('.navbar-sub__dogs').removeClass('menu-sub-active');
         } else {
-           $('.navbar-sub__dogs').toggleClass('menu-sub-active'); 
+           $('.navbar-sub__dogs').toggleClass('menu-sub-active');
         }
     });
     $(document).click(function(event) {
@@ -20,7 +20,7 @@ $(function() {
              && nav.has(event.target).length === 0) {
             $('.navbar').removeClass('menu-sub-active');
         } else {
-           $('.navbar').toggleClass('menu-sub-active'); 
+           $('.navbar').toggleClass('menu-sub-active');
         }
     });
     // плавный скролл
@@ -35,7 +35,7 @@ $(function() {
         if(myHash[1] != undefined){ //проверяем, есть ли в хеше какое-то значение
             $('html, body').animate(
                 {scrollTop: $(myHash).offset().top}
-                , 1000); 
+                , 1000);
             location.hash = myHash; //возвращаем хеш
         };
     }
@@ -77,7 +77,7 @@ $(function() {
     	   {
     		breakpoint: 1300,
     		settings: {
-    			
+
     			variableWidth: false,
 
     		  }
@@ -115,18 +115,11 @@ $(function() {
             .closest('div.puppy-main__photoes').find('.puppy__sub img').removeClass('puppy-pic-active').eq(currentSlide).addClass('puppy-pic-active');
     });
 
-    // $('.slider-puppy-nav').slick({
-    //     slidesToShow: 3,
-    //     arrows: false,
-    //     slidesToScroll: 1,
-    //     asNavFor: '.slider-puppy-for',
-    //     dots: false,
-    //     variableWidth: true,
-    //     adaptiveHeight: true,
-    //     //centerMode: true,
-    //     focusOnSelect: true
-    // });
+
+    function test() {
+        alert("in test");
+    }
 
 
 });
- 
+

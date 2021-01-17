@@ -54,7 +54,7 @@
                         <a href="about">Порода акита</a>
                     </li>
                     <li>
-                        <a href="events.php">События</a>
+                        <a href="/events">События</a>
                     </li>
                     <li>
                         <a href="index#contacts">Контакты</a>

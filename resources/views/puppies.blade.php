@@ -6,7 +6,10 @@
         <div class="page__heading">
             <div class="container">
                 <div class="breadcrump">
-                    <a href="/">Главная</a> / Щенки
+                    <a href="/">Главная</a>
+                    @foreach($obj->breadCramp() as $item)
+                        / <a href="/{{$item->getRoute()}}">{{$item->title}}</a>
+                    @endforeach
                 </div>
                 <h2 class="section__title page__title">
                     {{$obj->title}}
@@ -21,7 +24,7 @@
                 <div class="puppies__block">
                     @foreach($obj->items as $val )
                     <div class="puppies__puppy">
-                        <a href="puppies/{{$val->code}}" class="puppy__photo restful">
+                        <a href="{{$val->getRoute()}}" class="puppy__photo restful">
                             <img src="{{asset("img/{$val->image_main}")}}" alt="pappy-photo">
                         </a>
                         <div class="puppy__caption">

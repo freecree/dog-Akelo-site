@@ -11,7 +11,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 
-class Controller extends BaseController
+class PageController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
@@ -21,23 +21,15 @@ class Controller extends BaseController
         session_unset();
         return view("index");
     }
-//    public function getPuppyPage($code) {
-//        $p = PuppyPage::where('code', "$code")->firstOrFail();
-//        $p->explodeImages();
-//        return view("$p->fileName", ['obj'=>$p]);
-//    }
-
     public function getPage($code) {
-       if ($code == 'admin') {
+        if ($code == 'admin') {
             if (!Admin::isAdmin()) {
                 return view('admin_form');
             } else {
                 return redirect(route('admin.pages'));
             }
         }
-        $page = Page::where('code', "$code")->firstOrFail();
-        //$all_puppies = DB::table('puppy_pages')->get();
+        $page = Page::where('code', $code)->firstOrFail();
         return $page->render();
-        //return view("$code", ['puppies'=>$all_puppies, 'page'=>$page]);
     }
 };
